@@ -12,14 +12,16 @@ foods_dict = {
 
 total = 0
 
-while (True):
+while True:
     try:
         sample = input("Item: ").title()
 
-        for keys, values in foods_dict.items():
-            if sample == keys:
-                total += values
-        print(f"total : {total}")
+        if sample in foods_dict:
+            total += foods_dict[sample]
+            print(f"Total: ${total:.2f}")
+        else:
+            continue
+
     except EOFError:
-        print(total)
+        print(f"\nTotal: ${total:.2f}")
         break
