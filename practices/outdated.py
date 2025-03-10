@@ -1,4 +1,6 @@
-[
+import re
+
+months = [
     "January",
     "February",
     "March",
@@ -13,4 +15,8 @@
     "December"
 ]
 
-char_limits = ['/', ',', ' ']
+sample = input().strip().title()
+
+res = re.split(r"[,/ ]+", sample)
+
+print(*res[::-1], sep='-')

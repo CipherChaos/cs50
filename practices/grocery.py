@@ -2,7 +2,7 @@ try:
     dict1 = {}
 
     while True:
-        key = input().capitalize().strip()
+        key = input().upper().strip()
         if key in dict1:
             dict1[key] += 1
         else:
