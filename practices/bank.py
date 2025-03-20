@@ -1,11 +1,15 @@
-sample = input("Greeting: ").lower()
-print(sample)
+def main():
+    sample = input("Greeting: ").lower()
+    print(sample)
 
-if "hello" not in sample and sample.startswith('h'):
-    print("$20")
+    if "hello" not in sample and sample.startswith('h'):
+        print("$20")
 
-elif "hello" in sample:
-    print("$0")
+    elif "hello" in sample:
+        print("$0")
 
-else:
-    print("$100")
+    else:
+        print("$100")
+
+if __name__ == "__main__":
+    main()
