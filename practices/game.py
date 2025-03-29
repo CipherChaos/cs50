@@ -1,5 +1,6 @@
 from random import randint
 
+
 def get_level():
     while True:
         try:
@@ -11,6 +12,7 @@ def get_level():
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
+
 def get_guess():
     while True:
         try:
@@ -20,20 +22,25 @@ def get_guess():
             print("Invalid input. Please enter a valid number.")
 
 
-level = get_level()
-answer = randint(1, level)
+def main():
+    level = get_level()
+    answer = randint(1, level)
 
-while True:
-    user_answer = get_guess()
+    while True:
+        user_answer = get_guess()
 
-    if user_answer < 1 or user_answer > level:
-        print("Too large!")
-        continue
+        if user_answer < 1 or user_answer > level:
+            print("Too large!")
+            continue
 
-    if user_answer < answer:
-        print("Too small!")
-    elif user_answer > answer:
-        print("Too large!")
-    else:
-        print("Just right!")
-        break
+        if user_answer < answer:
+            print("Too small!")
+        elif user_answer > answer:
+            print("Too large!")
+        else:
+            print("Just right!")
+            break
+
+
+if __name__ == "__main__":
+    main()

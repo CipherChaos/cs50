@@ -10,6 +10,11 @@ def convert_case(s):
         return re.sub(r'([a-z])([A-Z])', r'\1_\2', s).lower()
 
 
-user_input = input("Enter a string in camelCase or snake_case: ")
-converted = convert_case(user_input)
-print("Converted:", converted)
+def main():
+    user_input = input("Enter a string in camelCase or snake_case: ")
+    converted = convert_case(user_input)
+    print("Converted:", converted)
+
+
+if __name__ == "__main__":
+    main()

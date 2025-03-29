@@ -1,7 +1,12 @@
-vowels = {'a', 'e', 'i', 'o', 'u'}
+def main():
+    vowels = {'a', 'e', 'i', 'o', 'u'}
 
-sample = input("Input: ")
+    sample = input("Input: ")
 
-output = "".join(char for char in sample if char.lower() not in vowels)
+    output = "".join(char for char in sample if char.lower() not in vowels)
 
-print(f"Output: {output}")
+    print(f"Output: {output}")
+
+
+if __name__ == "__main__":
+    main()
