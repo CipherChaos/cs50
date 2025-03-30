@@ -1,4 +1,3 @@
-from email.policy import default
 from itertools import chain
 
 def check_format(file_format, valid_extensions, formats):

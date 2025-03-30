@@ -1,5 +1,6 @@
+import emoji
+
 def main():
-    import emoji
 
     sample = str(input())
 
