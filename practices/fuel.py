@@ -1,16 +1,3 @@
-def main():
-    while True:
-        try:
-            fraction = input("Fraction: ").strip()
-            percentage = convert(fraction)
-            print(gauge(percentage))
-            break
-        except ValueError:
-            print("Invalid input. Please enter as X/Y.")
-        except ZeroDivisionError:
-            print("Denominator cannot be zero. Try again.")
-
-
 def convert(fraction):
     num, den = map(int, fraction.split("/"))
 
@@ -28,6 +15,19 @@ def gauge(percentage):
     elif percentage >= 99:
         return "F"
     return f"{percentage}%"
+
+
+def main():
+    while True:
+        try:
+            fraction = input("Fraction: ").strip()
+            percentage = convert(fraction)
+            print(gauge(percentage))
+            break
+        except ValueError:
+            print("Invalid input. Please enter as X/Y.")
+        except ZeroDivisionError:
+            print("Denominator cannot be zero. Try again.")
 
 
 if __name__ == "__main__":
