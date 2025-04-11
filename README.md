@@ -15,6 +15,6 @@ Topics covered:
 - Object-Oriented Programming
 - Unit Testing
 
-Just practicing, learning, and having fun with code! 
+Just practicing, learning, and having fun with code!.
 
 
