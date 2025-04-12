@@ -3,6 +3,7 @@ from requests import RequestException
 import sys
 
 def get_price_value():
+    #send a "get" request to API
     response = requests.get("https://api.coincap.io/v2/assets/bitcoin")
     data = response.json()
     price = float(data["data"]["priceUsd"])
@@ -14,6 +15,7 @@ def main():
         price = get_price_value()
 
         if len(sys.argv) == 2:
+            #calculate the number of bitcoin in cash
             bitcoin_count = float(sys.argv[1])
             if type(bitcoin_count) is float:
                 price *= bitcoin_count

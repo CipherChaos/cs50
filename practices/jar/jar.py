@@ -1,5 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
+        # Validated via setter
         self.capacity = capacity
         self.size = 0
 
@@ -11,6 +12,7 @@ class Jar:
             raise ValueError("Cannot deposit a negative number")
         if number + self.size > self.capacity:
             raise ValueError("Deposit would exceed jar capacity")
+        # Uses size setter for validation
         self._size += number
 
     def withdraw(self, number):

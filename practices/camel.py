@@ -6,7 +6,7 @@ def convert_case(s):
         parts = s.split("_")
         return parts[0] + "".join(word.capitalize() for word in parts[1:])
     else:
-
+        #use regex to give a pattern to find the camelcase words
         return re.sub(r'([a-z])([A-Z])', r'\1_\2', s).lower()
 
 

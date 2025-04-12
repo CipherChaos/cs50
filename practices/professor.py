@@ -16,6 +16,7 @@ def get_level():
 
 
 def generate_integer(level):
+    # Generate two random integers based on the selected difficulty level
     if level == 1:
         return randint(0, 9), randint(0, 9)
     elif level == 2:
@@ -28,20 +29,20 @@ def main():
     level = get_level()
     score = 0
 
-    for _ in range(10):
+    for _ in range(10): # 10 problems per game
         x, y = generate_integer(level)
         correct_answer = x + y
 
         print(f"{x} + {y} = ", end="")
 
-        for i in range(3):
+        for i in range(3): # 3 attempts per problem
             try:
                 answer = int(input())
                 if answer == correct_answer:
                     score += 1
                     break
                 else:
-                    print("EEE")
+                    print("EEE") # Show answer after 3 wrong attempts
                     if i == 2:
                         print(f"{x} + {y} = {correct_answer}")
             except ValueError:
